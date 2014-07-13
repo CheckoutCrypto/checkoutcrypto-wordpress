@@ -1,5 +1,5 @@
 CheckoutCrypto Wordpress Client (wp_cc)
-
+==========
 A payment option for the WP E-commerce shopping cart for Wordpress.
 
 Features
@@ -11,9 +11,12 @@ Prerequisites
 ==========
 
 * Wordpress
+* WP eCommerce plugin  https://wordpress.org/plugins/wp-e-commerce/
 * cURL support
 
-An account with checkoutcrypto.com  registration is free, all deposits and withdraws are charged a fee.
+* An account with checkoutcrypto.com  registration is free, all deposits and withdraws are charged a fee.
+
+* Preferred coins must be enabled from your account on checkoutcrypto.com
 
 
 INSTALL
@@ -28,6 +31,8 @@ INSTALL
 4. activate checkoutcrypt payment module in wp-e-commerce plugin. Go to Settings->Store->checkoutCrypto -> API. 
 
 5. Copy and paste your API key from your CheckoutCrypto.com Account, into your CheckoutCrypto Payment Module in step 4.
+
+6. Press "refresh coins" if you add a new coin, in order to cache the rate, coin, image.
 
 
 Support

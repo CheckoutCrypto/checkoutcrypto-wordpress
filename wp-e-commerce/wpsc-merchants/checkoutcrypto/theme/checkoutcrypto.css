@@ -17,7 +17,6 @@
 #cc_coin_select_wrapper {
   overflow: hidden;
   margin-left: 50px;
-  margin-right: 50px;
 }
 
 .cc_coin_coins {
@@ -26,6 +25,12 @@
 
 #cc_coin_enabled_wrapper > img {
   width: 50px;
+}
+
+.cc_coin_wrapper {
+  float: left;
+  width: 150px;
+  padding: 10px;
 }
 
 .cc_coin {
@@ -42,6 +47,10 @@
 
 #oc-cc-payment-info {
     margin-bottom: 5px;
+}
+
+#cc-notice {
+    margin-right: 50px;
 }
 
 #oc_cc_payment_qr_address_container {

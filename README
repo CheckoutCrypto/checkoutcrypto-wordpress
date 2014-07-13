@@ -5,5 +5,3 @@
 3. activate checkoutcrypto plugin.
 
 4. activate checkoutcrypt payment (soon to be merged with above). Go to Settings->Store->checkoutCrypto -> API.
-
-

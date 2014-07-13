@@ -33,8 +33,8 @@ class CheckoutCryptoApi {
         break;
       case 'getstatus':
         $orderid = $params['orderid'];
-        $coin_name = $params['coin'];
         $arguments .= '&action='.$action.'&queueid='.$orderid;
+	//if(is_array($orderid)) { var_dump($orderid); }
         $url = $base_url . $arguments;
         $result = $this->urlRequest($url);
         break;
@@ -54,7 +54,6 @@ class CheckoutCryptoApi {
         break;
      case 'getreceivedbyaddress':
         $coin_name = $params['coin'];
-        $amount = $params['amount'];
         $address = $params['address'];
         $confirms = $params['confirms'];
         $arguments .= '&action='.$action.'&coin='.$coin_name.'&address='.$address.'&confirms='.$confirms;

@@ -1,0 +1,9 @@
+1. install wp-e-commerce
+
+2. copy contents of wp-e-commerce to plugins/wp-e-commerce/   
+
+3. activate checkoutcrypto plugin.
+
+4. activate checkoutcrypt payment (soon to be merged with above). Go to Settings->Store->checkoutCrypto -> API.
+
+

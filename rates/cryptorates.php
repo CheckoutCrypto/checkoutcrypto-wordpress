@@ -15,7 +15,7 @@ Class ratesDb {
     function setRates($coin_code,$coin_rate) {
         try {
             $rDb = $this->connectDb();
-            $stmt = $rDb->prepare("UPDATE cc_coins SET coin_rate = :coin_rate  WHERE coin_code = :coin_code LIMIT 1" );
+            $stmt = $rDb->prepare("UPDATE wp_cc_coins SET coin_rate = :coin_rate  WHERE coin_code = :coin_code LIMIT 1" );
 
             $stmt->bindValue(':coin_code', $coin_code, PDO::PARAM_STR);
             $stmt->bindValue(':coin_rate', $coin_rate, PDO::PARAM_INT);

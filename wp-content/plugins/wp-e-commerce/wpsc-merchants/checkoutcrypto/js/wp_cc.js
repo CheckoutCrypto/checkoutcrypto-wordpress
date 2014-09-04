@@ -96,7 +96,7 @@ $("#cc-hidden-purchase-btn").on('click', function (e) {
 								    console.log(e.target.id);
 								    var coin_code = e.target.id;
 								    coin_code = coin_code.substring(8).toUpperCase();
-  									if(coin_code == "btc"){
+  									if(coin_code == "BTC"){
 										iVal = iVal *2;
 										timeleft = timeleft *2;
                         			}

@@ -24,9 +24,13 @@ jQuery(document).ready(function ($) {
         var minutes = Math.floor(timeleft/60);
         var seconds = timeleft%60;
         var seconds_string = "0" + seconds;
-        seconds_string = seconds_string.substr(seconds_string.length - 2)
-        document.getElementById('timer').innerHTML = minutes + ":" + seconds_string;
-    }
+        seconds_string = seconds_string.substr(seconds_string.length - 2);
+		if(document.getElementById("timer") != null){
+			document.getElementById("timer").innerHTML = minutes + ":" + seconds_string;
+		}else{
+			timeleft = 0;
+		}
+  }
 
   function submit_wp_cc_form() {
 
@@ -91,6 +95,10 @@ $("#cc-hidden-purchase-btn").on('click', function (e) {
 								    console.log(e.target.id);
 								    var coin_code = e.target.id;
 								    coin_code = coin_code.substring(8).toUpperCase();
+  									if(coin_code == "btc"){
+										iVal = iVal *2;
+										timeleft = timeleft *2;
+                        			}
 								    checkoutcrypto_order_details(coin_code);
 								}
 						});

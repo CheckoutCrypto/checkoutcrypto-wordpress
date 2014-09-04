@@ -14,12 +14,10 @@ class CheckoutCryptoApi {
     }
 
     $base_url = 'https://api.checkoutcrypto.com/';
-	// $base_url = 'http://127.0.0.1/html/ccdev/api/api.php';
     $arguments = '?apikey='.$apikey;
     switch ($action) {
       case 'getnewaddress':
         $coin_name = $params['coin'];
-        $coin_amount = $params['amount'];
         $arguments .= '&action='.$action.'&coin='.$coin_name;
         $url = $base_url . $arguments;
         $result = $this->urlRequest($url);
@@ -34,8 +32,7 @@ class CheckoutCryptoApi {
         break;
       case 'getstatus':
         $orderid = $params['orderid'];
-        $coin_name = $params['coin'];
-        $arguments .= '&action='.$action.'&queueid='.$orderid.'&coin='.$coin_name;
+        $arguments .= '&action='.$action.'&queueid='.$orderid;
         $url = $base_url . $arguments;
         $result = $this->urlRequest($url);
         break;
@@ -55,7 +52,6 @@ class CheckoutCryptoApi {
         break;
      case 'getreceivedbyaddress':
         $coin_name = $params['coin'];
-        $amount = $params['amount'];
         $address = $params['address'];
         $confirms = $params['confirms'];
         $arguments .= '&action='.$action.'&coin='.$coin_name.'&address='.$address.'&confirms='.$confirms;

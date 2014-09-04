@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
     checker = 0;
 
     var timeleft = 900;
+	var iVal = 5000;
     var expired_countdown_content = 'The time limit has been reached. Please close this window and submit your order to try again.';
 
     function timer() {
@@ -179,7 +180,7 @@ $("#cc-hidden-purchase-btn").on('click', function (e) {
 										             document.getElementById("oc-cc-payment-info").innerHTML = 'Please send <span style="font-weight: bold;"> '+coin_total+'</span> '+coin_code.toUpperCase()+' to:';
 										             document.getElementById("oc-cc-payment-address").value = 'Contacting server...';
 										             countdown = setInterval(timer, 1000);
-										             checker = setInterval(function() { checkoutcrypto_check(coin_code)}, 3000);
+										             checker = setInterval(function() { checkoutcrypto_check(coin_code)}, iVal);
 										        }
 									}
 								});

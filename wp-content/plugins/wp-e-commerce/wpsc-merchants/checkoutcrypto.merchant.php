@@ -1,5 +1,6 @@
 <?php
-include_once('./checkoutcrypto/lib/cc.php');
+$dir = plugin_dir_path( __FILE__ );
+include_once($dir.'checkoutcrypto/lib/cc.php');
 /**
 	* CheckoutCrypto WordPress E-Commerce Client
 	* Version 0.8.2 Alpha
